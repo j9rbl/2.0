@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - J9R</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 0px;
+            background-image: url('backgroundmenu.png'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center center; 
+            background-attachment: fixed;
+        }
+        button {
+            background: linear-gradient(to bottom, DeepSkyBlue, DarkViolet);
+            border: yes;
+            color: white;
+            padding: 5px 5px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin: 99px;
+margin-left: 15px;
+  margin-right: 15px;
+            font-size: 20px;
+            transition: 0.2s;
+        }
+        button:hover {
+            background: linear-gradient(to bottom, cyan, Fuchsia);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+  
+        /* Estilo para a galeria e imagens */
+        .gallery-container {
+    display: none; /* Galeria inicialmente oculta */
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+
+   
+}
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 calc(10% - 10px);
+    margin: 10px;
+margin-left: 1px;
+  margin-right: 1px;
+ 
+}
+
+        .gallery-item img {
+            max-width: 60px;
+            max-height: 60px;
+            transition: 0.2s;
+        }
+        .gallery-item img:hover {
+            transform: scale(4);
+        }
+    </style>
+</head>
+<body>
+
+    <h2></h2>
+    <button onclick="location.href='folhas.html'">Contagem de Folhas</button>
+    <button onclick="location.href='numeracao.html'">Numeração e Grades</button>
+    <!-- Botão para exibir a galeria -->
+    <button onclick="toggleGallery()">Desenhos Prontos</button>
+
+    <!-- Galeria de imagens -->
+
+     <div class="gallery-container" id="galleryContainer">
+        <div class="gallery-item">
+    <a href="appimage/imagem1.png" download>
+        <img src="appimage/imagem1.png" alt="Imagem 1">
+    </a>
+</div>
+
+        <div class="gallery-item">
+    <a href="appimage/imagem2.png" download>
+        <img src="appimage/imagem2.png" alt="Imagem 2">
+    </a>
+</div>
+
+        <div class="gallery-item">
+    <a href="appimage/imagem3.png" download>
+        <img src="appimage/imagem3.png" alt="Imagem 3">
+    </a>
+</div>
+        <div class="gallery-item">
+    <a href="appimage/imagem4.png" download>
+        <img src="appimage/imagem4.png" alt="Imagem 4">
+    </a>
+</div>
+        <div class="gallery-item">
+    <a href="appimage/imagem5.png" download>
+        <img src="appimage/imagem5.png" alt="Imagem 5">
+    </a>
+</div>
+        <div class="gallery-item">
+    <a href="appimage/imagem6.png" download>
+        <img src="appimage/imagem6.png" alt="Imagem 6">
+    </a>
+</div>
+        <div class="gallery-item">
+    <a href="appimage/imagem7.png" download>
+        <img src="appimage/imagem7.png" alt="Imagem 7">
+    </a>
+</div>
+        <div class="gallery-item">
+    <a href="appimage/imagem8.png" download>
+        <img src="appimage/imagem8.png" alt="Imagem 8">
+    </a>
+</div>
+        <div class="gallery-item">
+    <a href="appimage/imagem9.png" download>
+        <img src="appimage/imagem9.png" alt="Imagem 9">
+    </a>
+</div>
+        <div class="gallery-item">
+    <a href="appimage/imagem10.png" download>
+        <img src="appimage/imagem10.png" alt="Imagem 10">
+    </a>
+</div>
+        <div class="gallery-item">
+    <a href="appimage/imagem11.png" download>
+        <img src="appimage/imagem11.png" alt="Imagem 11">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem12.png" download>
+        <img src="appimage/imagem12.png" alt="Imagem 12">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem13.png" download>
+        <img src="appimage/imagem13.png" alt="Imagem 13">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem14.png" download>
+        <img src="appimage/imagem14.png" alt="Imagem 14">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem15.png" download>
+        <img src="appimage/imagem15.png" alt="Imagem 15">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem16.png" download>
+        <img src="appimage/imagem16.png" alt="Imagem 16">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem17.png" download>
+        <img src="appimage/imagem17.png" alt="Imagem 17">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem18.png" download>
+        <img src="appimage/imagem18.png" alt="Imagem 18">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem19.png" download>
+        <img src="appimage/imagem19.png" alt="Imagem 19">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem20.png" download>
+        <img src="appimage/imagem20.png" alt="Imagem 20">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem21.png" download>
+        <img src="appimage/imagem21.png" alt="Imagem 21">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem22.png" download>
+        <img src="appimage/imagem22.png" alt="Imagem 22">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem23.png" download>
+        <img src="appimage/imagem23.png" alt="Imagem 23">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem24.png" download>
+        <img src="appimage/imagem24.png" alt="Imagem 24">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem25.png" download>
+        <img src="appimage/imagem25.png" alt="Imagem 25">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem26.png" download>
+        <img src="appimage/imagem26.png" alt="Imagem 26">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem27.png" download>
+        <img src="appimage/imagem27.png" alt="Imagem 27">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem28.png" download>
+        <img src="appimage/imagem28.png" alt="Imagem 28">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem29.png" download>
+        <img src="appimage/imagem29.png" alt="Imagem 29">
+    </a>
+</div>
+   <div class="gallery-item">
+    <a href="appimage/imagem30.png" download>
+        <img src="appimage/imagem30.png" alt="Imagem 30">
+    </a>
+</div>
+ <div class="gallery-item">
+    <a href="appimage/imagem31.png" download>
+        <img src="appimage/imagem31.png" alt="Imagem 31">
+    </a>
+</div>
+ <div class="gallery-item">
+    <a href="appimage/imagem32.png" download>
+        <img src="appimage/imagem32.png" alt="Imagem 32">
+    </a>
+</div>
+ <div class="gallery-item">
+    <a href="appimage/imagem33.png" download>
+        <img src="appimage/imagem33.png" alt="Imagem 33">
+    </a>
+</div>
+ <div class="gallery-item">
+    <a href="appimage/imagem34.png" download>
+        <img src="appimage/imagem34.png" alt="Imagem 34">
+    </a>
+</div>
+ <div class="gallery-item">
+    <a href="appimage/imagem35.png" download>
+        <img src="appimage/imagem35.png" alt="Imagem 35">
+    </a>
+</div>
+ <div class="gallery-item">
+    <a href="appimage/imagem36.png" download>
+        <img src="appimage/imagem36.png" alt="Imagem 36">
+    </a>
+</div>
+ <div class="gallery-item">
+    <a href="appimage/imagem37.png" download>
+        <img src="appimage/imagem37.png" alt="Imagem 37">
+    </a>
+</div>
+ <div class="gallery-item">
+    <a href="appimage/imagem38.png" download>
+        <img src="appimage/imagem38.png" alt="Imagem 38">
+    </a>
+</div>
+ <div class="gallery-item">
+    <a href="appimage/imagem39.png" download>
+        <img src="appimage/imagem39.png" alt="Imagem 39">
+    </a>
+</div>
+ <div class="gallery-item">
+    <a href="appimage/imagem40.png" download>
+        <img src="appimage/imagem40.png" alt="Imagem 40">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem41.png" download>
+        <img src="appimage/imagem41.png" alt="Imagem 41">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem42.png" download>
+        <img src="appimage/imagem42.png" alt="Imagem 42">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem43.png" download>
+        <img src="appimage/imagem43.png" alt="Imagem 43">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem44.png" download>
+        <img src="appimage/imagem44.png" alt="Imagem 44">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem45.png" download>
+        <img src="appimage/imagem45.png" alt="Imagem 45">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem46.png" download>
+        <img src="appimage/imagem46.png" alt="Imagem 46">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem47.png" download>
+        <img src="appimage/imagem47.png" alt="Imagem 47">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem48.png" download>
+        <img src="appimage/imagem48.png" alt="Imagem 48">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem49.png" download>
+        <img src="appimage/imagem49.png" alt="Imagem 49">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem50.png" download>
+        <img src="appimage/imagem50.png" alt="Imagem 50">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem51.png" download>
+        <img src="appimage/imagem51.png" alt="Imagem 51">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem52.png" download>
+        <img src="appimage/imagem52.png" alt="Imagem 52">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem53.png" download>
+        <img src="appimage/imagem53.png" alt="Imagem 53">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem54.png" download>
+        <img src="appimage/imagem54.png" alt="Imagem 54">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem55.png" download>
+        <img src="appimage/imagem55.png" alt="Imagem 55">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem56.png" download>
+        <img src="appimage/imagem56.png" alt="Imagem 56">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem57.png" download>
+        <img src="appimage/imagem57.png" alt="Imagem 57">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem58.png" download>
+        <img src="appimage/imagem58.png" alt="Imagem 58">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem59.png" download>
+        <img src="appimage/imagem59.png" alt="Imagem 59">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem60.png" download>
+        <img src="appimage/imagem60.png" alt="Imagem 60">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem61.png" download>
+        <img src="appimage/imagem61.png" alt="Imagem 61">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem62.png" download>
+        <img src="appimage/imagem62.png" alt="Imagem 62">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem63.png" download>
+        <img src="appimage/imagem63.png" alt="Imagem 63">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem64.png" download>
+        <img src="appimage/imagem64.png" alt="Imagem 64">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem65.png" download>
+        <img src="appimage/imagem65.png" alt="Imagem 65">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem66.png" download>
+        <img src="appimage/imagem66.png" alt="Imagem 66">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem67.png" download>
+        <img src="appimage/imagem67.png" alt="Imagem 67">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem68.png" download>
+        <img src="appimage/imagem68.png" alt="Imagem 68">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem69.png" download>
+        <img src="appimage/imagem69.png" alt="Imagem 69">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem70.png" download>
+        <img src="appimage/imagem70.png" alt="Imagem 70">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem71.png" download>
+        <img src="appimage/imagem71.png" alt="Imagem 71">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem72.png" download>
+        <img src="appimage/imagem72.png" alt="Imagem 72">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem73.png" download>
+        <img src="appimage/imagem73.png" alt="Imagem 73">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem74.png" download>
+        <img src="appimage/imagem74.png" alt="Imagem 74">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem76.png" download>
+        <img src="appimage/imagem76.png" alt="Imagem 76">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem77.png" download>
+        <img src="appimage/imagem77.png" alt="Imagem 77">
+    </a>
+</div><div class="gallery-item">
+    <a href="appimage/imagem78.png" download>
+        <img src="appimage/imagem78.png" alt="Imagem 78">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem79.png" download>
+        <img src="appimage/imagem79.png" alt="Imagem 79">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem80.png" download>
+        <img src="appimage/imagem80.png" alt="Imagem 80">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem81.png" download>
+        <img src="appimage/imagem81.png" alt="Imagem 81">
+    </a>
+</div>
+<div class="gallery-item">
+    <a href="appimage/imagem82.png" download>
+        <img src="appimage/imagem82.png" alt="Imagem 82">
+    </a>
+</div>
+
+    </div>
+
+    <script>
+        // Verifica se o usuário está logado
+        if (!localStorage.getItem('userLoggedIn')) {
+            window.location.href = 'index.html';
+        }
+
+        // Função para exibir/ocultar a galeria
+        function toggleGallery() {
+            const gallery = document.getElementById('galleryContainer');
+            gallery.style.display = gallery.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
+</body>
+</html>

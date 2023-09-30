@@ -1,0 +1,98 @@
+/* Reset algumas propriedades padrão dos navegadores */
+body, h1, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Definir propriedades para o corpo da página */
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Configurações para o canvas */
+canvas {
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+/* Configurações para o título */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Configurações para os controles */
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Configurações para os botões */
+button {
+    background: linear-gradient(to right, purple, mediumblue);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    width: 200px;
+}
+
+button:hover {
+    background: linear-gradient(to right, darkpurple, darkblue);
+}
+
+
+/* ... (outras partes do CSS permanecem inalteradas) ... */
+
+/* Configurações para os controles */
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para melhor visibilidade */
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* ... (outras partes do CSS permanecem inalteradas) ... */
+
+#downloadLinks {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    z-index: 1000; /* Assegura que os botões estejam no topo */
+}
+.color-picker-container {
+    position: fixed;    /* Fixa o elemento em uma posição específica */
+    top: 500px;          /* 20 pixels a partir do topo da página */
+    right: 20px;        /* 20 pixels a partir da direita da página */
+    padding: 10px;      /* Adiciona um pouco de espaço em torno do conteúdo */
+    background-color: #f9f9f9; /* Uma cor de fundo clara para destaque */
+    border: 1px solid #ccc;    /* Uma borda cinza clara para definição */
+    border-radius: 15px;        /* Borda arredondada para estética */
+}

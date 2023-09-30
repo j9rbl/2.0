@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J9R I.A</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-image: url('backgroundfolhas.png'); background-size: cover; background-repeat: no-repeat; background-position: center center; background-attachment: fixed;">
+    <h1></h1>
+    <label for="imageInput">Selecione o seu Projeto (seu projeto deve estar em tamanho pequeno.)</label>
+    <input type="file" id="imageInput" accept="image/*">
+
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    
+
+    <button id="taco5Btn" style="display:none; background: linear-gradient(to right, purple, mediumblue); border: none; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Projeto no taco de 5</button>
+
+   <button id="taco7Btn" style="display:none; background: linear-gradient(to right, purple, mediumblue); border: none; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Projeto no taco de 7</button>
+
+ <button id="taco8Btn" style="display:none; background: linear-gradient(to right, purple, mediumblue); border: none; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Projeto no taco de 8</button>
+
+
+<button id="taco10Btn" style="display:none; background: linear-gradient(to right, purple, mediumblue); border: none; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Projeto no taco de 10</button>
+
+<button id="taco12Btn" style="display:none; background: linear-gradient(to right, purple, mediumblue); border: none; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Projeto no taco de 12</button>
+
+<button id="taco15Btn" style="display:none; background: linear-gradient(to right, purple, mediumblue); border: none; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Projeto no taco de 15</button>
+
+<button id="taco16Btn" style="display:none; background: linear-gradient(to right, purple, mediumblue); border: none; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Projeto no taco de 16</button>
+
+<button id="taco20Btn" style="display:none; background: linear-gradient(to right, purple, mediumblue); border: none; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Projeto no taco de 20</button>
+
+   <button id="downloadBtn" style="display:none; background: linear-gradient(to right, purple, mediumblue); border: none; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Baixar Contagem de Folhas</button>
+
+<div id="uploadedImageContainer" style="display: none;"></div>
+
+    <div id="results"></div>
+<button id="backButton" style="position: fixed; top: 862px; right: 5px;">Voltar</button>
+    <script src="script.js"></script>
+</body>
+</html>

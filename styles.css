@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+button {
+    margin: 10px;
+}
+
+#results > div {
+    display: inline-block;
+    width: 100px;
+    height: 70px;
+    border: 2px solid black;
+    margin: 5px;
+    position: relative;
+    vertical-align: top;
+}
+
+#results > div > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    border: 0px solid black;
+    padding: 2px 5px;
+}
+ #taco5Btn, #taco7Btn, #taco8Btn, #taco9Btn, #taco10Btn, #taco12Btn, #taco15Btn, #taco16Btn, #taco20Btn {
+    display: block;
+    margin: 10px auto;
+}
+
+canvas {
+    display: none;
+}
+#downloadBtn {
+    display: block;
+    margin: 30px auto;
+}
+#backButton {
+    border: yes;
+    background: linear-gradient(90deg, DeepSkyBlue, DarkViolet); /* Degrade de roxo para azul médio */
+    color: white;
+    padding: 9px 11px;
+    border-radius: 2px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#backButton:hover {
+    opacity: 0.7; /* Efeito de opacidade ao passar o mouse */
+}
+#imageInput {
+  margin-top: 100px;
+  border: 3px solid purple;
+}
+
+#uploadedImageContainer {
+    position: fixed;  /* Fixa o contêiner na tela */
+    right: 580px;      /* 10 pixels da borda direita da tela */
+    top: 250px;        /* 10 pixels da borda superior da tela */
+}
+
+
+#uploadedImageContainer img {
+    min-width: 200px; /* ou qualquer tamanho desejado */
+    min-height: 200px;
+}
+
