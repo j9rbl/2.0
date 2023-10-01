@@ -181,6 +181,26 @@ function getUniqueColors(data) {
 
     return colors;
 }
+
+let watermark = new Image();
+watermark.src = "marca.png"; // Substitua pelo caminho correto da sua marca d'água
+
+function addWatermark() {
+    // Ajustar o tamanho da marca d'água para caber na imagem ampliada
+    let scaledWidth = canvas.width;
+    let scaledHeight = (canvas.width / watermark.width) * watermark.height;
+    if (scaledHeight > canvas.height) {
+        scaledHeight = canvas.height;
+        scaledWidth = (canvas.height / watermark.height) * watermark.width;
+    }
+
+    // Posicionando a marca d'água no centro da imagem
+    let posX = (canvas.width - scaledWidth) / 2;
+    let posY = (canvas.height - scaledHeight) / 2;
+
+    ctx.drawImage(watermark, posX, posY, scaledWidth, scaledHeight);
+}
+
 // Continuação do app.js
 
 document.getElementById('number').addEventListener('click', numberImage, false);
@@ -210,6 +230,7 @@ function numberImage() {
  generateColorLegend(colors);
         }
     }
+ addWatermark();
 }
 
 
@@ -251,6 +272,7 @@ function drawGrid(primarySpacing, secondarySpacing, gridColor) {
         ctx.lineTo(canvas.width, y + 0.5);
         ctx.stroke();
     }
+addWatermark();
 }
 
 let lastGridType = null;
@@ -367,7 +389,20 @@ function divideImage(parts) {
             let tempCanvas = document.createElement('canvas');
             tempCanvas.width = partWidth;
             tempCanvas.height = partHeight;
-            tempCanvas.getContext('2d').putImageData(data, 0, 0);
+            let tempCtx = tempCanvas.getContext('2d');
+            tempCtx.putImageData(data, 0, 0);
+
+ // Adicionando a marca d'água na parte da imagem
+            let watermarkScaledWidth = tempCanvas.width;
+            let watermarkScaledHeight = (tempCanvas.width / watermark.width) * watermark.height;
+            if (watermarkScaledHeight > tempCanvas.height) {
+                watermarkScaledHeight = tempCanvas.height;
+                watermarkScaledWidth = (tempCanvas.height / watermark.height) * watermark.width;
+            }
+            let watermarkPosX = (tempCanvas.width - watermarkScaledWidth) / 2;
+            let watermarkPosY = (tempCanvas.height - watermarkScaledHeight) / 2;
+            tempCtx.drawImage(watermark, watermarkPosX, watermarkPosY, watermarkScaledWidth, watermarkScaledHeight);
+
 
             let downloadLink = createDownloadLink(partCounter, projectNameInput, tempCanvas);
             partCounter++;
@@ -464,19 +499,23 @@ function downloadLegendAsImage() {
         tempCtx.fillText(number, x + itemWidth / 2, itemHeight / 2);
     });
 
-    let link = document.createElement('a');
-    link.href = tempCanvas.toDataURL();
-    link.download = 'gabarito.png';
-    link.click();
-}
 
-document.getElementById('backButton').addEventListener('click', function() {
-    window.location.href = 'acessoapp.html';
-});
 document.getElementById('downloadProject').addEventListener('click', function() {
     let link = document.createElement('a');
     link.href = canvas.toDataURL();
     link.download = 'projeto.png';
     link.textContent = "Clique aqui para baixar";
     document.body.appendChild(link);
+});
+
+    let link = document.createElement('a');
+    link.href = tempCanvas.toDataURL();
+    link.download = 'gabarito.png';
+    link.click();
+}
+
+
+
+document.getElementById('backButton').addEventListener('click', function() {
+    window.location.href = 'acessoapp.html';
 });
